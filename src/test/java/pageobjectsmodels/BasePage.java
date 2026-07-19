@@ -25,7 +25,7 @@ public class BasePage {
         element.sendKeys(text);
     }
 
-    protected String getText(By locator) {
+    protected String getText(By locator) {git remote -v
         return wait.waitForVisibility(locator).getText();
     }
 
