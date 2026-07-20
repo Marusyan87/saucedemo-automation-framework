@@ -25,10 +25,13 @@ public class BasePage {
         element.sendKeys(text);
     }
 
-
-
+    protected String getText(By locator) {
+        return wait.waitForVisibility(locator).getText();
+    }
 
     protected boolean isDisplayed(By locator) {
-        return wait.waitForVisibility(locator).isDisplayed();
+        return driver.findElements(locator)
+                .stream()
+                .anyMatch(WebElement::isDisplayed);
     }
 }
