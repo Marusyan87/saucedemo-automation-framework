@@ -1,81 +1,84 @@
-# SauceDemo Automation Framework
+# SauceDemo Selenium Automation Framework
 
-## About
+## Overview
 
-This project is a UI Automation Framework built using Selenium WebDriver and Java.
+This project is a UI Test Automation Framework built using Java, Selenium WebDriver, JUnit 5 and Gradle.
 
-The framework follows the Page Object Model (POM) design pattern and includes reporting, logging, screenshots on failure and GitHub Actions CI.
+The framework automates end-to-end scenarios for the SauceDemo application using the Page Object Model (POM) design pattern and reusable utilities.
 
 ---
 
-## Technologies
+## Tech Stack
 
 - Java 21
 - Selenium WebDriver
 - JUnit 5
 - Gradle
-- Log4j2
 - Allure Report
-- Git
-- GitHub
 - GitHub Actions
+- Page Object Model (POM)
 
 ---
 
 ## Project Structure
 
-```
 src
- ├── test
- │   ├── pageobjectsmodels
- │   ├── scenarious
- │   ├── utils
- │   └── resources
-```
+├── pageobjectmodels
+├── scenarious
+├── utils
+└── resources
 
 ---
 
-## Features
+## Automated Test Scenarios
+
+- Login
+- Logout
+- Add Product to Cart
+- Remove Product from Cart
+- Checkout Flow
+
+---
+
+## Framework Features
 
 - Page Object Model
-- Driver Factory
-- Wait Utils
-- Config Reader
-- Screenshot on Failure
-- Logging with Log4j2
-- Allure Reporting
+- DriverFactory
+- BaseTestClass
+- BasePage
+- WaitUtils
+- ScreenshotUtils
+- ConfigReader
+- TestListener
+- Allure Reports
 - GitHub Actions CI
 
 ---
 
-## Test Scenarios
+## Running the tests
 
-- Login Test
-- Logout Test
-- Add Product To Cart
-- Remove Product From Cart
-- Checkout Test
-
----
-
-## Run Tests
+Run all tests:
 
 ```bash
-./gradlew clean test
+./gradlew test
+```
+
+Run a single test:
+
+```bash
+./gradlew test --tests scenarious.LoginTest
 ```
 
 ---
 
-## Generate Allure Report
+## Continuous Integration
 
-```bash
-./gradlew allureServe
-```
+GitHub Actions automatically executes all UI tests on every push to the repository.
 
 ---
 
 ## Author
 
-**Marius Aioanei**
+Marius Aioanei
 
-Junior QA Automation Engineer
+QA Automation Portfolio
