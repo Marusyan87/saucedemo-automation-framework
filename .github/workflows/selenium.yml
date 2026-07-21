@@ -21,7 +21,8 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-
+      - name: Setup Chrome
+        uses: browser-actions/setup-chrome@v1
       - name: Grant execute permission
         run: chmod +x gradlew
 

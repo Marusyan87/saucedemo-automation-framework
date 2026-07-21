@@ -25,6 +25,9 @@ public class DriverFactory {
                 options.addArguments("--disable-features=PasswordLeakDetection");
                 options.addArguments("--disable-save-password-bubble");
                 options.addArguments("--incognito");
+                options.addArguments("--headless=new");
+                options.addArguments("--no-sandbox");
+                options.addArguments("--disable-dev-shm-usage");
 
                 options.setExperimentalOption(
                         "prefs",
